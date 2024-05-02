@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/images/favicon-32x32.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <header
+      class="w-[375px] h-[240px] bg-[url('src/images/bg-main-mobile.png')] bg-no-repeat laptop:bg-[url('src/images/bg-main-desktop.png')] laptop:bg-no-repeat laptop:h-screen laptop:w-[483px]"
+    >
+      <section>
+        <section
+          class="laptop:w-[541px] laptop:h-[527px] laptop:top-[187px] laptop:left-[164px] bottom-[186px] laptop:right-[735px] laptop:relative laptop:flex laptop:flex-col-reverse laptop:justify-between laptop:ali laptop:place-content-between"
+        >
+          <img
+            class="absolute top-[32px] left-[73px] w-[286px] h-[157px] laptop:w-[447px] laptop:h-[245px] laptop:self-end laptop:static"
+            src="/src/images/bg-card-back.png"
+            alt="background card back"
+          />
+          <img
+            class="relative top-[126px] left-[16px] w-[286px] h-[157px] laptop:w-[447px] laptop:h-[245px] laptop:self-start laptop:static"
+            src="/src/images/bg-card-front.png"
+            alt="background card front"
+          />
+        </section>
+        <form
+          id="nameCard"
+          class="w-[327px] h-[328px] top-[331px] left-6 right-6 absolute laptop:border laptop:border-solid laptop:border-black laptop:w-[381px] laptop:h-[384px] laptop:left-[832px] laptop:top-[275px]"
+        >
+          <label
+            for=""
+            class="mt-0 font-grot text-[12px] leading-[15px] tracking-[2px] font-medium not-italic block"
+            >CARDHOLDER NAME</label
+          >
+          <input
+            type="text"
+            placeholder="e.g. Jane Appleseed"
+            class="mt-[9px] top-[9px] border border-opacity-15 border-Very-dark-violet rounded-md block w-[327px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 placeholder:pl-4"
+          />
+          <label
+            for=""
+            class="mt-[20px] uppercase font-grot text-[12px] leading-[15px] tracking-[2px] font-medium not-italic block"
+            >Card Nunmber</label
+          >
+          <input
+            placeholder="e.g. 1234 5678 9123 0000"
+            type="text"
+            class="mt-[9px] border border-opacity-15 border-Very-dark-violet rounded-md block w-[327px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 placeholder:pl-4"
+          />
+          <div class="flex gap-[11px]">
+            <div>
+              <label
+                for=""
+                class="mt-[20px] font-grot text-[12px] leading-[15px] tracking-[2px] font-medium not-italic block"
+                >EXP. DATE (MM/YY)</label
+              >
+              <div class="flex gap-2">
+                <input
+                  type="text"
+                  placeholder="MM"
+                  class="mt-[9px] border border-opacity-15 border-Very-dark-violet rounded-md placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 placeholder:pl-4 w-[72px] h-[45px]"
+                />
+                <input
+                  type="text"
+                  placeholder="YY"
+                  class="mt-[9px] border border-opacity-15 border-Very-dark-violet rounded-md placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 placeholder:pl-4 w-[72px] h-[45px]"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                for=""
+                class="mt-[20px] block font-grot text-[12px] leading-[15px] tracking-[2px] font-medium not-italic"
+                >CVC</label
+              >
+              <input
+                type="text"
+                placeholder="e.g. 123"
+                class="mt-[9px] border border-opacity-15 border-Very-dark-violet rounded-md block w-[165px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 placeholder:pl-4"
+              />
+            </div>
+          </div>
+          <button
+            class="bg-Very-dark-violet rounded-md w-[327px] h-[53px] text-[18px] font-grot text-white mt-[28px]"
+          >
+            Confirm
+          </button>
+        </form>
+      </section>
+      <div class="text-black block">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Gonzalo Guerrero</a>.
+      </div>
+    </header>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
