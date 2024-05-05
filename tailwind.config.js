@@ -8,6 +8,8 @@ export default {
     extend: {
       colors: {
         'Very-dark-violet': '#21092f',
+        'Dark-grayish-violet': '#8e8593',
+        'Light-grayish-violet': '#dedddf'
       },
       fontFamily: {
         'grot': ['Space Grotesk Variable', 'sans-serif'],
@@ -20,3 +22,8 @@ export default {
   },
   plugins: [],
 }
+
+// White: hsl(0, 0%, 100%)
+// - Light grayish violet: hsl(270, 3%, 87%)
+// - Dark grayish violet: hsl(279, 6%, 55%)
+// - Very dark violet: hsl(278, 68%, 11%)

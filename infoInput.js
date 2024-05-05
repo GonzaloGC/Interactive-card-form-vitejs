@@ -1,6 +1,8 @@
+
+
 // document.addEventListener('DOMContentLoaded', () => {
-//   let infoIn = document.querySelector("#inputCard");
+//   let infoIn = document.querySelector("#nameCard");
 //   infoIn.addEventListener('input', () =>{
-//    console.log(infoIn.value);
+//     return infoIn.value;
 //   });
 // });
