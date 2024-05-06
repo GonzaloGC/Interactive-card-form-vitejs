@@ -9,7 +9,8 @@ export default {
       colors: {
         'Very-dark-violet': '#21092f',
         'Dark-grayish-violet': '#8e8593',
-        'Light-grayish-violet': '#dedddf'
+        'Light-grayish-violet': '#dedddf',
+        'Red-input-errors': '#ff5252'
       },
       fontFamily: {
         'grot': ['Space Grotesk Variable', 'sans-serif'],

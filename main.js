@@ -29,12 +29,24 @@ document.addEventListener("DOMContentLoaded", () => {
     let regExp = /[A-z]+/g;
 
     if (regExp.test(infoNum.value)) {
-      error.innerText = "Wrong format, numbers only";
+      showError(infoNum, error, 'Wrong format, numbers only');
+      // error.innerText = "Wrong format, numbers only";
     } else{ 
       infoNum.value = inputValue.replace(/\s/g, '').replace(/([0-9]{4})/g, '$1 ').trim();
-      error.innerText = "";
+      hiddenError(infoNum, error, '');
+      // error.innerText = "";
     }
 
+    function showError(infoNumber, errorInput, msgError) {
+      errorInput.innerText = msgError;
+      infoNumber.classList.add("focus:border-red-900");
+      
+      
+    }
+    function hiddenError(infoNumber, errorInput, msgError){
+      errorInput.innerText = msgError;
+      infoNumber.classList.remove("focus:border-red-900");
+    }
 
   });
 
