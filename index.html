@@ -109,7 +109,7 @@
           id="nameCard"
           type="text"
           placeholder="e.g. Jane Appleseed"
-          class="mt-[9px] top-[9px] border border-opacity-15 border-Very-dark-violet rounded-md block w-[327px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 laptop:w-[381px] laptop:border-Dark-grayish-violet"
+          class="mt-[9px] top-[9px] border border-Dark-grayish-violet rounded-md block w-[327px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 laptop:w-[381px] laptop:border-Dark-grayish-violet laptop:focus:outline-none laptop:focus:border-blue-950"
         />
         <label
           class="mt-[20px] uppercase font-grot text-[12px] leading-[15px] tracking-[2px] font-medium not-italic block laptop:mt-[26px]"
@@ -117,9 +117,10 @@
         >
         <input
           id="valueNum"
+          maxlength="19"
           placeholder="e.g. 1234 5678 9123 0000"
           type="text"
-          class="mt-[9px] border border-opacity-15 border-Very-dark-violet rounded-md block w-[327px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 laptop:w-[381px]  focus:outline-none laptop:border-Dark-grayish-violet"
+          class="mt-[9px] border border-Dark-grayish-violet rounded-md block w-[327px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 laptop:w-[381px]  focus:outline-none laptop:border-Dark-grayish-violet laptop:focus:outline-none laptop:focus:border-blue-950"
         />
         <p id="errorNumber" class="text-Red-input-errors text-xs absolute laptop:absolute">
           
@@ -136,18 +137,19 @@
                 type="number"
                 maxlength="2"
                 placeholder="MM"
-                class="pl-4 mt-[9px] border border-opacity-15 border-Very-dark-violet rounded-md placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 w-[72px] h-[45px] laptop:border-Dark-grayish-violet laptop:w-[80px] laptop:h-[45px]"
+                class="pl-4 mt-[9px] border border-Dark-grayish-violet rounded-md placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 w-[72px] h-[45px] laptop:border-Dark-grayish-violet laptop:w-[80px] laptop:h-[45px] laptop:focus:outline-none laptop:focus:border-blue-950"
               />
               <input
                 id="valueYear"
                 type="number"
                 maxlength="2"
                 placeholder="YY"
-                class="mt-[9px] border border-opacity-15 border-Very-dark-violet rounded-md placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 w-[72px] h-[45px] laptop:border-Dark-grayish-violet laptop:w-[80px] laptop:h-[45px] laptop:ml-[4px]"
+                class="mt-[9px] border border-Dark-grayish-violet rounded-md placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 w-[72px] h-[45px] laptop:border-Dark-grayish-violet laptop:w-[80px] laptop:h-[45px] laptop:ml-[4px] laptop:focus:outline-none laptop:focus:border-blue-950"
               />
             </div>
+            <div id="infoDivYM">Can't be blank</div>
           </div>
-          <div>
+          <div class="pl-[14px]">
             <label
               class="mt-[20px] block font-grot text-[12px] leading-[15px] tracking-[2px] font-medium not-italic laptop:mt-[30px]"
               >CVC</label
@@ -156,8 +158,10 @@
               id="valueCvc"
               type="text"
               placeholder="e.g. 123"
-              class="mt-[9px] border border-opacity-15 border-Very-dark-violet rounded-md block w-[165px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 laptop:border-Dark-grayish-violet laptop:w-[191px] laptop:h-[45px] laptop:ml-[7px]"
+              class="mt-[9px] border border-Dark-grayish-violet rounded-md block w-[150px] h-[45px] placeholder:pl-[16px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25  laptop:border-Dark-grayish-violet laptop:w-[191px] laptop:h-[45px]  focus:outline-none focus:border-blue-950 laptop:placeholder:pl-[16px]"
             />
+            <div id="infoDivCvc" >Can't be blank</div>
+            
           </div>
         </div>
         <button

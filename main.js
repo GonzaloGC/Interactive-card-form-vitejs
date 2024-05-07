@@ -40,37 +40,55 @@ document.addEventListener("DOMContentLoaded", () => {
     function showError(infoNumber, errorInput, msgError) {
       errorInput.innerText = msgError;
       infoNumber.classList.add("focus:border-red-900");
-      
-      
     }
     function hiddenError(infoNumber, errorInput, msgError){
+    console.log(inputValue);
       errorInput.innerText = msgError;
       infoNumber.classList.remove("focus:border-red-900");
     }
 
   });
-
+  // Validando el input mes en la tarjeta
   let infoMonth = document.querySelector("#valueMonth");
   let infoMonthCard = document.querySelector("#valueMonthCard");
-  infoMonth.addEventListener("input", () => {
-    infoMonthCard.innerText = infoMonth.value;
+  infoMonth.addEventListener("input", event => {
+    const maxLength = 2;
+    const inputValue = event.target.value;
+    if (inputValue.length >= maxLength) {
+      const truncateValue = inputValue.slice(0, maxLength);
+      infoMonth.value = truncateValue;
+    }
+    // infoMonthCard.innerText = infoMonth.value;
+    if (infoMonth.value == "") {
+      infoMonthCard.innerText = "00";
+    }else{
+      infoMonthCard.innerText = infoMonth.value;4
+    }
   });
 
+  // Validando el input año en la tarjeta
   let infoYear = document.querySelector("#valueYear");
   let infoYearCard = document.querySelector("#valueYearCard");
-  infoYear.addEventListener("input", () => {
-    infoYearCard.innerText = infoYear.value;
+  infoYear.addEventListener("input", event => {
+    const maxLength = 2;
+    const lengthInputYear = event.target.value;
+    console.log(lengthInputYear);
+    if (lengthInputYear.length > maxLength) {
+      const truncateInputYear = lengthInputYear.slice(0, maxLength);
+      infoYear.value = truncateInputYear;
+    }
+    if (infoYear.value == "") {
+      infoYearCard.innerText = "00";
+    }else{
+      infoYearCard.innerText = infoYear.value;
+    }
   });
 
+  // Validando el input cvc en la tarjeta
   let infoCvc = document.querySelector("#valueCvc");
   let valueInputCvc = document.querySelector("#numberCardBack");
   infoCvc.addEventListener("input", () => {
     valueInputCvc.innerText = infoCvc.value;
   });
 
-  // Validando que aya una letra
 });
-
-// document.querySelector('#nameCard').innerText= `
-//   <input id="inputCard" class="border border-solid border-black" type="text">
-// `

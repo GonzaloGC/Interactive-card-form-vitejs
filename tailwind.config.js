@@ -12,6 +12,7 @@ export default {
         'Light-grayish-violet': '#dedddf',
         'Red-input-errors': '#ff5252'
       },
+      
       fontFamily: {
         'grot': ['Space Grotesk Variable', 'sans-serif'],
       },
