@@ -1,20 +1,35 @@
-// import './style.css';
-// import './infoInput.js';
-
 document.addEventListener("DOMContentLoaded", () => {
-  let infoIn = document.querySelector("#nameCard");
+  let valueInputCard = document.querySelector("#nameCard");
   let selecp = document.querySelector("#nameCardBack");
-  infoIn.addEventListener("input", () => {
-    if (infoIn.value == "") {
-      selecp.innerText = "Jane";
+  let errorDivName = document.querySelector("#errorName");
+  valueInputCard.addEventListener("input", () => {
+    if (valueInputCard.value == "") {
+      selecp.innerText = "JANE APPLESEED";
     } else {
-      selecp.innerText = infoIn.value;
+      selecp.innerText = valueInputCard.value;
+    }
+    
+    //  Validando el error al introducir un número
+    let regExpNum = /[0-9]+/g
+    
+    if (regExpNum.test(valueInputCard.value)){
+      errorDivName.innerText = "Wrong format, letters only";
+      valueInputCard.classList.add("focus:border-Red-input-errors");
+      valueInputCard.style.borderColor = '#ff5252';
+      valueInputCard.classList.remove("focus:border-blue-950");
+    }else{
+      errorDivName.innerText = "";
+      valueInputCard.style.borderColor = '';
+    }
+    let lengthInputCard = valueInputCard.value.length;
+    if (lengthInputCard == 0) {
+      errorDivName.classList.remove("border-Red-input-errors"); 
     }
   });
 
   let infoNum = document.querySelector("#valueNum");
   let selecpn = document.querySelector("#numberCardFront");
-  let error = document.querySelector("#errorNumber");
+  let errorDivNumber = document.querySelector("#errorNumber");
   infoNum.addEventListener("input", event => {
     
     let inputValue = event.target.value;
@@ -25,25 +40,29 @@ document.addEventListener("DOMContentLoaded", () => {
       selecpn.innerText = infoNum.value;
     }
 
-    //  validando el error al introducir una letra
+    //  Validando el error al introducir una letra
     let regExp = /[A-z]+/g;
 
     if (regExp.test(infoNum.value)) {
-      showError(infoNum, error, 'Wrong format, numbers only');
+      showError(infoNum, errorDivNumber, 'Wrong format, numbers only');
       // error.innerText = "Wrong format, numbers only";
     } else{ 
       infoNum.value = inputValue.replace(/\s/g, '').replace(/([0-9]{4})/g, '$1 ').trim();
-      hiddenError(infoNum, error, '');
+      hiddenError(infoNum, errorDivNumber, '');
       // error.innerText = "";
     }
-
-    function showError(infoNumber, errorInput, msgError) {
+  // Funciones
+    function showError(infoInput, errorInput, msgError) {
       errorInput.innerText = msgError;
-      infoNumber.classList.add("focus:border-red-900");
+      infoInput.style.borderColor = '#ff5252';
+      infoInput.classList.add("focus:border-Red-input-errors");
+      infoInput.classList.remove("focus:border-blue-950");
     }
-    function hiddenError(infoNumber, errorInput, msgError){
+    function hiddenError(infoInput, errorInput, msgError){
       errorInput.innerText = msgError;
-      infoNumber.classList.remove("focus:border-red-900");
+      infoInput.style.borderColor = '';
+      infoInput.classList.remove("focus:border-Red-input-errors");
+      infoInput.classList.add("focus:border-blue-950");
     }
 
   });
@@ -69,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Validando el input año en la tarjeta
   let infoYear = document.querySelector("#valueYear");
   let infoYearCard = document.querySelector("#valueYearCard");
+  let errorDivYearCard = document.querySelector("#infoDivYM");
   infoYear.addEventListener("input", event => {
     const maxLength = 2;
     const lengthInputYear = event.target.value;
@@ -82,6 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }else{
       infoYearCard.innerText = infoYear.value;
       errorBlankMonthYear.innerText = "";
+    }
+    if (lengthInputYear.length > 0) {
+      infoYear.style.borderColor = '#21092f';
+    }else{
+      infoYear.style.borderColor = '#21092f';
     }
   });
 
@@ -103,24 +128,53 @@ document.addEventListener("DOMContentLoaded", () => {
       valueInputCvc.innerText = infoCvc.value;
       errorBlaankCvc.innerText = "";
     }
+    if (inputLengthCvc.length > 0) {
+      infoCvc.style.borderColor = '#21092f';
+    }
   });
-
+  // Validando el formulario a traves del boton
   let buttonEventClic = document.querySelector('#buttonClic');
   let errorBlankMonthYear = document.querySelector('#infoDivYM');
   let errorBlaankCvc = document.querySelector('#infoDivCvc');
   buttonEventClic.addEventListener('click', event => {
     event.preventDefault();
-    
-    if (infoMonth.value == "" || infoYear.value == ""){
+    if (valueInputCard.value == "") {
+      errorDivName.innerText = `Can't be blank`;
+      valueInputCard.style.borderColor = '#ff5252';
+      // valueInputCard.classList.remove("border-Dark-grayish-violet");
+    }else{
+      valueInputCard.style.borderColor = '';
+
+    }
+    if (infoNum.value == "") {
+      errorDivNumber.innerText = `Can't be blank`;
+      infoNum.style.borderColor = '#ff5252';
+      //infoNum.classList.remove("border-Dark-grayish-violet");
+    }else{
+      infoNum.style.borderColor = '';
+
+    }
+    if (infoMonth.value == ""){
       errorBlankMonthYear.innerText = `Can't be blank`;
+      infoMonth.style.borderColor = '#ff5252';
+      // infoYear.style.borderColor = '#ff5252';
+    }else{
+      infoMonth.style.borderColor = '';
+      // infoYear.style.borderColor = '';
+    }
+    if (infoYear.value == ""){
+      errorBlankMonthYear.innerText = `Can't be blank`;
+      // infoMonth.style.borderColor = '#ff5252';
+      infoYear.style.borderColor = '#ff5252';
+    }else{
+      // infoMonth.style.borderColor = '';
+      infoYear.style.borderColor = '';
     }
     if (infoCvc.value == "") {
       errorBlaankCvc.innerText = `Can't be blank`;
+      infoCvc.style.borderColor = '#ff5252';
+    }else{
+      infoCvc.style.borderColor = '';
     }
-    
   })
-
-
-
-
 });

@@ -63,31 +63,31 @@
           </div>
           <p
             id="numberCardFront"
-            class="top-10 left-10 relative text-white laptop:relative laptop:top-[250px]"
+            class="top-10 left-10 relative text-white laptop:relative laptop:top-[250px] font-grot text-lg leading-[23px] tracking-[2.2px]"
           >
             0000 0000 0000 0000
           </p>
           <div class="flex mt-2">
             <p
               id="nameCardBack"
-              class="top-[245px] left-10 absolute text-white laptop:top-[320px]"
+              class="top-[245px] left-10 absolute text-white laptop:top-[220px] font-grot text-[9px] leading-[11px] tracking-[1.28px]"
             >
-              Jane
+            JANE APPLESEED
             </p>
             <p
               id="valueMonthCard"
-              class="top-[245px] left-[235px] absolute text-white laptop:top-[320px] laptop:left-[350px]"
+              class="top-[245px] left-[235px] absolute text-white laptop:top-[320px] laptop:left-[350px] text-[9px] leading-[11px] tracking-[1.28px]"
             >
               00
             </p>
             <p
-              class="top-[245px] left-[253px] absolute text-white laptop:top-[320px] laptop:left-[370px]"
+              class="top-[245px] left-[253px] absolute text-white laptop:top-[320px] laptop:left-[370px] text-[9px] leading-[11px] tracking-[1.28px]"
             >
               /
             </p>
             <p
               id="valueYearCard"
-              class="top-[245px] left-[260px] absolute text-white laptop:top-[320px] laptop:left-[380px]"
+              class="top-[245px] left-[260px] absolute text-white laptop:top-[320px] laptop:left-[380px] text-[9px] leading-[11px] tracking-[1.28px]"
             >
               00
             </p>
@@ -107,8 +107,12 @@
           id="nameCard"
           type="text"
           placeholder="e.g. Jane Appleseed"
-          class="mt-[9px] top-[9px] border border-Dark-grayish-violet rounded-md block w-[327px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 laptop:w-[381px] laptop:border-Dark-grayish-violet laptop:focus:outline-none laptop:focus:border-blue-950"
+          class="mt-[9px] top-[9px] rounded-md block w-[327px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 laptop:w-[381px] focus:outline-none focus:border-blue-950 border border-Dark-grayish-violet"
         />
+        <div
+          id="errorName"
+          class="pt-[8px] text-Red-input-errors text-xs relative"
+        ></div>
         <label
           class="mt-[20px] uppercase font-grot text-[12px] leading-[15px] tracking-[2px] font-medium not-italic block laptop:mt-[26px]"
           >Card Nunmber</label
@@ -118,11 +122,11 @@
           maxlength="19"
           placeholder="e.g. 1234 5678 9123 0000"
           type="text"
-          class="mt-[9px] border border-Dark-grayish-violet rounded-md block w-[327px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 laptop:w-[381px] focus:outline-none laptop:border-Dark-grayish-violet laptop:focus:outline-none laptop:focus:border-blue-950"
+          class="mt-[9px] border border-Dark-grayish-violet border- rounded-md block w-[327px] h-[45px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 laptop:w-[381px] focus:outline-none focus:border-blue-950"
         />
         <p
           id="errorNumber"
-          class="text-Red-input-errors text-xs absolute laptop:absolute"
+          class="pt-[8px] text-Red-input-errors text-xs relative"
         ></p>
         <div class="flex gap-[11px]">
           <div>
@@ -136,19 +140,19 @@
                 type="number"
                 maxlength="2"
                 placeholder="MM"
-                class="pl-4 mt-[9px] border border-Dark-grayish-violet rounded-md placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 w-[72px] h-[45px] laptop:border-Dark-grayish-violet laptop:w-[80px] laptop:h-[45px] laptop:focus:outline-none laptop:focus:border-blue-950"
+                class="mt-[9px] border border-Dark-grayish-violet rounded-md placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 w-[72px] h-[45px] laptop:w-[80px] laptop:h-[45px] focus:outline-none placeholder:pl-4 focus:border-blue-950"
               />
               <input
                 id="valueYear"
                 type="number"
                 maxlength="2"
                 placeholder="YY"
-                class="mt-[9px] border border-Dark-grayish-violet rounded-md placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 pl-4 w-[72px] h-[45px] laptop:border-Dark-grayish-violet laptop:w-[80px] laptop:h-[45px] laptop:ml-[4px] laptop:focus:outline-none laptop:focus:border-blue-950"
+                class="mt-[9px] border border-Dark-grayish-violet rounded-md placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 placeholder:pl-4 w-[72px] h-[45px] laptop:w-[80px] laptop:h-[45px] laptop:ml-[4px] focus:outline-none focus:border-blue-950"
               />
             </div>
-            <div class="absolute" id="infoDivYM"></div>
+            <div class="pt-[8px] text-Red-input-errors text-xs relative" id="infoDivYM"></div>
           </div>
-          <div class="pl-[14px]">
+          <div class="pl-[10px] laptop:pl-[7px]">
             <label
               class="mt-[20px] block font-grot text-[12px] leading-[15px] tracking-[2px] font-medium not-italic laptop:mt-[30px]"
               >CVC</label
@@ -156,10 +160,11 @@
             <input
               id="valueCvc"
               type="text"
+              maxlength="3"
               placeholder="e.g. 123"
-              class="mt-[9px] border border-Dark-grayish-violet rounded-md block w-[150px] h-[45px] placeholder:pl-[16px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 laptop:border-Dark-grayish-violet laptop:w-[191px] laptop:h-[45px] focus:outline-none focus:border-blue-950 laptop:placeholder:pl-[16px]"
+              class="mt-[9px] border border-Dark-grayish-violet rounded-md block w-[150px] h-[45px] placeholder:pl-[16px] placeholder:font-grot placeholder:text-[18px] placeholder:leading-[23px] placeholder:font-medium placeholder:not-italic placeholder:text-Very-dark-violet placeholder:opacity-25 laptop:w-[191px] laptop:h-[45px] focus:outline-none focus:border-blue-950 laptop:placeholder:pl-[16px]"
             />
-            <div class="absolute" id="infoDivCvc"></div>
+            <div class="pt-[8px] text-Red-input-errors text-xs relative" id="infoDivCvc"></div>
           </div>
         </div>
         <button
