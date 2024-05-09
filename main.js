@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       infoNumber.classList.add("focus:border-red-900");
     }
     function hiddenError(infoNumber, errorInput, msgError){
-    console.log(inputValue);
       errorInput.innerText = msgError;
       infoNumber.classList.remove("focus:border-red-900");
     }
@@ -62,7 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (infoMonth.value == "") {
       infoMonthCard.innerText = "00";
     }else{
-      infoMonthCard.innerText = infoMonth.value;4
+      infoMonthCard.innerText = infoMonth.value;
+      errorBlankMonthYear.innerText = "";
     }
   });
 
@@ -81,14 +81,46 @@ document.addEventListener("DOMContentLoaded", () => {
       infoYearCard.innerText = "00";
     }else{
       infoYearCard.innerText = infoYear.value;
+      errorBlankMonthYear.innerText = "";
     }
   });
 
   // Validando el input cvc en la tarjeta
   let infoCvc = document.querySelector("#valueCvc");
   let valueInputCvc = document.querySelector("#numberCardBack");
-  infoCvc.addEventListener("input", () => {
-    valueInputCvc.innerText = infoCvc.value;
+  let errorDivCvc = document.querySelector('#infoDivCvc');
+  infoCvc.addEventListener("input", event => {
+    let maxLength = 3;
+    let inputLengthCvc = event.target.value;
+    if (inputLengthCvc > maxLength) {
+      const truncateInputCvc = inputLengthCvc.slice(0, maxLength)
+      infoCvc.value = truncateInputCvc;
+    }
+
+    if (infoCvc.value == "") {
+      valueInputCvc.innerText = "000";
+    }else{
+      valueInputCvc.innerText = infoCvc.value;
+      errorBlaankCvc.innerText = "";
+    }
   });
+
+  let buttonEventClic = document.querySelector('#buttonClic');
+  let errorBlankMonthYear = document.querySelector('#infoDivYM');
+  let errorBlaankCvc = document.querySelector('#infoDivCvc');
+  buttonEventClic.addEventListener('click', event => {
+    event.preventDefault();
+    
+    if (infoMonth.value == "" || infoYear.value == ""){
+      errorBlankMonthYear.innerText = `Can't be blank`;
+    }
+    if (infoCvc.value == "") {
+      errorBlaankCvc.innerText = `Can't be blank`;
+    }
+    
+  })
+
+
+
 
 });
