@@ -10,7 +10,8 @@ export default {
         'Very-dark-violet': '#21092f',
         'Dark-grayish-violet': '#8e8593',
         'Light-grayish-violet': '#dedddf',
-        'Red-input-errors': '#ff5252'
+        'Red-input-errors': '#ff5252',
+        'Purplish-grey-continue': '#8F8694'
       },
       
       fontFamily: {

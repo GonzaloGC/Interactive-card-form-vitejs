@@ -189,35 +189,65 @@ document.addEventListener("DOMContentLoaded", () => {
       divErrorDateLength > 0 ||
       divErrorCvcLength > 0
     ) {
-      console.log("no hace nada");
+      
     } else {
-      newSection.innerHTML = `<section class="w-[327px] h-[328px] top-[500px] left-6 right-6 absolute laptop:w-[381px] laptop:h-[384px] laptop:left-[832px] laptop:top-[300px]">
-      <div >
-      <div class="flex justify-center content-center">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="40" cy="40" r="40" fill="url(#paint0_linear_0_525)"/>
-          <defs>
-          <linearGradient id="paint0_linear_0_525" x1="-23.0143" y1="11.5071" x2="1.03143e-06" y2="91.5071" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#6348FE"/>
-          <stop offset="1" stop-color="#610595"/>
-          </linearGradient>
-          </defs>
-        </svg>
-        <svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3. org/2000/svg">
-          <path d="M2 9.91991L10.0801 18L26.0801 2" stroke="white" stroke-width="3"/>
-        </svg>
-        
-      </div>
-      <div class="text-center font-Very-dark-violet font-grot text-[28px] leading-[36px] tracking-[3.4px] font-medium uppercase">thank you!</div>
-      <p class="text-center">We’ve added your card details</p>  
-      <button
-      id="buttonClic"
-        class="bg-Very-dark-violet rounded-md w-[327px] h-[53px] text-[18px] font-grot text-white mt-[25px] laptop:w-[381px] laptop:h-[53px] laptop:mt-[30px] cursor-pointer"
-      >
-      Continue
-      </button>
-      </div>
-    </Section>`;
+      newSection.innerHTML = `<section
+        class="w-[327px] h-[328px] top-[330px] left-6 right-6 absolute laptop:w-[381px] laptop:h-[291px] laptop:left-[832px] laptop:top-[300px]"
+        >
+          <div class="flex flex-col justify-center items-center">
+            <div class="relative">
+              <svg
+               class="relative"
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="40" cy="40" r="40" fill="url(#paint0_linear_0_525)" />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_0_525"
+                    x1="-23.0143"
+                    y1="11.5071"
+                    x2="1.03143e-06"
+                    y2="91.5071"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#6348FE" />
+                    <stop offset="1" stop-color="#610595" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <svg
+                class="absolute top-[30px] left-[25px]"
+                width="28"
+                height="21"
+                viewBox="0 0 28 21"
+                fill="none"
+                xmlns="http://www.w3. org/2000/svg"
+              >
+                <path
+                  d="M2 9.91991L10.0801 18L26.0801 2"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+            </div>
+            <div
+              class=" font-Very-dark-violet font-grot text-[28px] leading-[36px] tracking-[3.4px] font-medium uppercase mt-[35px]"
+            >
+              thank you!
+            </div>
+            <p class="text-center mt-[16px] text-Purplish-grey-continue font-grot text-18px] leading-[23px]  font-medium">We’ve added your card details</p>
+            <button
+              id="buttonClic"
+              class="bg-Very-dark-violet self-end rounded-md w-[327px] h-[53px] text-[18px] font-grot text-white mt-[48px] laptop:w-[381px] laptop:h-[53px] laptop:mt-[48px] cursor-pointer"
+            >
+              Continue
+            </button>
+          </div>
+        </section>`;
     }
   };
 
