@@ -17,14 +17,14 @@ This command starts a local development server with hot module replacement, allo
 
 To start the development server, run:
 ```
-pnpm run dev
+pnpm run build
 ```
 This command bundles your application into static files for production. It optimizes the output for the best performance.
 ### Preview Production Build
 
 To start the development server, run:
 ```
-pnpm run dev
+pnpm run preview
 ```
 This command serves the files generated from the build command locally, allowing you to inspect the production build and ensure it works as expected before deploying.
 
