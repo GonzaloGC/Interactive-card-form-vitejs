@@ -1,9 +1,44 @@
+# Interactive card details form solution
+
+This project was created using Vite.js, a fast and modern build tool for web projects.
+
+## Getting Started
+
+To get started with the project, you'll need to use the following scripts:
+
+### Development Server
+
+To start the development server, run:
+```
+pnpm run dev
+```
+This command starts a local development server with hot module replacement, allowing you to see your changes in real-time as you edit your code.
+### Build for Production
+
+To start the development server, run:
+```
+pnpm run dev
+```
+This command bundles your application into static files for production. It optimizes the output for the best performance.
+### Preview Production Build
+
+To start the development server, run:
+```
+pnpm run dev
+```
+This command serves the files generated from the build command locally, allowing you to inspect the production build and ensure it works as expected before deploying.
+
 # Frontend Mentor - Interactive card details form solution
 
 This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
+- [Interactive card details form solution](#interactive-card-details-form-solution)
+  - [Getting Started](#getting-started)
+    - [Development Server](#development-server)
+    - [Build for Production](#build-for-production)
+    - [Preview Production Build](#preview-production-build)
 - [Frontend Mentor - Interactive card details form solution](#frontend-mentor---interactive-card-details-form-solution)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
@@ -16,9 +51,6 @@ This is a solution to the [Interactive card details form challenge on Frontend M
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -35,7 +67,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./src/images/Screenshot-interactive-card.png)
+![](./src/images/screenShot-interactive.png)
 
 ### Links
 
@@ -50,51 +82,33 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - [Tailwindcss](https://tailwindcss.com/) - CSS framework
-
+- [Vite js](https://vitejs.dev/) - Next Generation Frontend Tooling
+  
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned to use the Tailwind CSS framework by using different types of classes to make the site responsive, using the "mobile first" approach.
 
-To see how you can add code snippets, see below:
+Example of Tailwind CSS classes in HTML:
 
 ```html-Tailwind CSS
-<h1>Some HTML code I'm proud of</h1>
+<h1 font-grot text-[9px] leading-[11px] tracking-[1.28px] font-medium laptop:font-grot laptop:text-[14px] laptop:leading-[18px] laptop:tracking-[2px] laptop:font-medium">Some HTML code I'm proud of</h1>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Example of a JavaScript event listener:
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+buttonEventClic.addEventListener("click", clickConfirm);
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+My focus is on continuing to develop in JavaScript along with technologies such as React.js and TypeScript.
 
 ### Useful resources
 
-- [Web Javascript Info](https://es.javascript.info/) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Clean-code-javascript-es](https://github.com/andersontr15/clean-code-javascript-es) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Javascript Info](https://es.javascript.info/) - This website is one of the most comprehensive online resources for learning JavaScript.
+- [Eloquent JavaScript - 4ª edición (2024)](https://eloquent-javascript-es.vercel.app/) - This book is a very comprehensive resource for learning JavaScript. The best part is that it is updated to 2024, translated into Spanish, and free.
+- [Fontsource](https://fontsource.org/) - All kinds of fonts to download and install via terminal with their npm package.
 
 ## Author
 
 - Frontend Mentor - [@GonzaloGC](https://www.frontendmentor.io/profile/GonzaloGC)
 - Twitter - [@gonzaloelias](https://twitter.com/gonzaloelias)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
