@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (valueInputCard.value == "") {
       selecp.innerText = "JANE APPLESEED";
     } else {
-      selecp.innerText = valueInputCard.value;
+      selecp.innerText = valueInputCard.value.toUpperCase();
     }
     //  Validando el error al introducir un número
     let regExpNum = /[0-9]+/g;
