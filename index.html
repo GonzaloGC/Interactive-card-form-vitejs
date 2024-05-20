@@ -12,101 +12,76 @@
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Interactive card details form</title>
   </head>
-  <body>
-    <section>
+  <body class="flex laptop:items-center laptop:justify-center laptop:content-center justify-center items-start m-0 p-0 h-screen">
+    <section class="flex flex-col laptop:flex-row laptop:gap-[300px] laptop:justify-center laptop:items-center justify-center items-center gap-[91px]">
       <header
-        class="w-[375px] h-[240px] bg-[url('src/images/bg-main-mobile.png')] bg-no-repeat laptop:bg-[url('src/images/bg-main-desktop.png')] laptop:bg-no-repeat laptop:h-screen laptop:w-[483px]"
-      >
+        class="w-[375px] h-[240px] bg-[url('src/images/bg-main-mobile.png')] bg-no-repeat bg-cover laptop:flex laptop:justify-center laptop:items-center laptop:bg-[url('src/images/bg-main-desktop.png')] laptop:bg-no-repeat laptop:h-screen laptop:w-[483px]"
+       >
         <section
-          class="w-[343px] h-[251] laptop:w-[541px] laptop:h-[527px] laptop:top-[70px] laptop:left-[164px] laptop:right-[735px] laptop:flex laptop:relative laptop:flex-col-reverse laptop:justify-between laptop:place-content-between"
-        >
-          <div>
-            <img
-              class="relative top-[32px] left-[73px] w-[286px] h-[157px] laptop:w-[447px] laptop:h-[245px] laptop:top-[130px]"
-              src="/src/images/bg-card-back.png"
-              alt="background card back"
-            />
+          class="w-[343px] h-[251px] laptop:w-[541px] laptop:h-[527px] laptop:flex laptop:flex-col-reverse laptop:justify-center laptop:left-[150px] left-[16px] laptop:bottom-10 gap-[6px] relative"
+          >
+          <div class="bg-[url('src/images/bg-card-back.png')] bg-no-repeat bg-cover w-[286px] h-[157px] laptop:w-[447px] laptop:h-[245px] pb-[2px] pr-9 laptop:pr-14 laptop:pb-1 absolute laptop:relative top-[32px] left-[50px] flex justify-end items-center">
+
             <p
               id="numberCardBack"
-              class="absolute text-white top-[103px] left-[304px] font-grot text-[9px] leading-[11px] tracking-[1.29px] font-medium laptop:absolute laptop:top-[523px] laptop:left-[430px] laptop:font-grot laptop:text-[14px] laptop:leading-[18px] laptop:tracking-[2px] laptop:font-medium"
+              class=" text-white font-grot text-[9px] leading-[11px] tracking-[1.29px] font-medium laptop:top-[523px] laptop:left-[430px] laptop:font-grot laptop:text-[14px] laptop:leading-[18px] laptop:tracking-[2px] laptop:font-medium"
             >
               000
             </p>
           </div>
-          <div>
-            <img
-              class="absolute top-[126px] left-[16px] w-[286px] h-[157px] laptop:w-[447px] laptop:h-[245px] laptop:self-start laptop:absolute"
-              src="/src/images/bg-card-front.png"
-              alt="background card front"
-            />
-            <div class="">
-              <svg
-                class="absolute top-[143px] left-[36px] laptop:w-[47px] laptop:h-[47px]"
-                width="31"
-                height="30"
-                viewBox="0 0 31 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <ellipse
-                  cx="15.0932"
-                  cy="15"
-                  rx="15.0932"
-                  ry="15"
-                  fill="white"
-                />
-              </svg>
-              <svg
-                class="absolute left-[78px] top-[152px] laptop:top-[158px] laptop:w-[21px] laptop:h-[21px] laptop:left-[100px]"
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13.5 7C13.5 10.4489 10.6859 13.25 7.20806 13.25C3.73021 13.25 0.916138 10.4489 0.916138 7C0.916138 3.55113 3.73021 0.75 7.20806 0.75C10.6859 0.75 13.5 3.55113 13.5 7Z"
-                  stroke="white"
-                />
-              </svg>
-            </div>
-            <p
-              id="numberCardFront"
-              class="top-[52px] left-[36px] relative text-white laptop:relative laptop:top-[248px] font-grot text-lg leading-[23px] tracking-[2.2px] laptop:font-grot laptop:text-[28px] laptop:leading-[36px] laptop:tracking-[3.4px] laptop:font-medium"
-            >
-              0000 0000 0000 0000
-            </p>
-            <div class="flex mt-2">
-              <p
-                id="nameCardBack"
-                class="top-[250px] left-10 absolute text-white laptop:top-[328px] font-grot text-[9px] leading-[11px] tracking-[1.28px] font-medium laptop:font-grot laptop:text-[14px] laptop:leading-[18px] laptop:tracking-[2px] laptop:font-medium"
-              >
-                JANE APPLESEED
-              </p>
-              <p
-                id="valueMonthCard"
-                class="top-[250px] left-[248px] absolute text-white laptop:top-[328px] laptop:left-[368px] text-[9px] leading-[11px] tracking-[1.28px] laptop:font-grot laptop:text-[14px] laptop:leading-[18px] laptop:tracking-[2px] laptop:font-medium"
-              >
-                00
-              </p>
-              <p
-                class="top-[250px] left-[262px] absolute text-white laptop:top-[328px] laptop:left-[392px] text-[9px] leading-[11px] tracking-[1.28px] laptop:font-grot laptop:text-[14px] laptop:leading-[18px] laptop:tracking-[2px] laptop:font-medium"
-              >
-                /
-              </p>
-              <p
-                id="valueYearCard"
-                class="top-[250px] left-[268px] absolute text-white laptop:top-[328px] laptop:left-[400px] text-[9px] leading-[11px] tracking-[1.28px] laptop:font-grot laptop:text-[14px] laptop:leading-[18px] laptop:tracking-[2px] laptop:font-medium"
-              >
-                00
-              </p>
+          
+          <div class="bg-[url('src/images/bg-card-front.png')] bg-no-repeat bg-cover relative top-[126px] w-[286px] h-[157px] laptop:w-[447px] laptop:h-[245px] laptop:static ">
+            
+            <div class="p-[19px] laptop:p-[32px] h-full box-border flex flex-col justify-between">
+              <div class="flex items-center gap-2 laptop:gap-[15px]">
+                <div class="border-[3px] border-solid border-white w-[31px]
+                h-[30px] laptop:w-[47px] laptop:h-[47px] rounded-[50%] bg-white"></div>
+                <div class="border-[1.5px] border-solid border-white w-[14px]
+                h-[14px] laptop:w-[21px] laptop:h-[21px] rounded-[50%]"></div>
+              </div>
+              <div class="flex flex-col gap-[17px] laptop:gap-[25.5px]">
+                <p
+                  id="numberCardFront"
+                  class="left-[36px] text-white  laptop:top-[248px] font-grot text-lg leading-[23px] tracking-[2.2px] laptop:font-grot laptop:text-[28px] laptop:leading-[36px] laptop:tracking-[3.4px] laptop:font-medium"
+                >
+                  0000 0000 0000 0000
+                </p>
+                <div class="flex justify-between">
+                  <p
+                    id="nameCardBack"
+                    class=" left-10 text-white laptop:top-[328px] font-grot text-[9px] leading-[11px] tracking-[1.28px] font-medium laptop:font-grot laptop:text-[14px] laptop:leading-[18px] laptop:tracking-[2px] laptop:font-medium"
+                  >
+                    JANE APPLESEED
+                  </p>
+                  <div class="flex gap-[1px]" >
+                    <p
+                      id="valueMonthCard"
+                      class=" left-[248px] text-white laptop:top-[328px] laptop:left-[368px] text-[9px] leading-[11px] tracking-[1.28px] laptop:font-grot laptop:text-[14px] laptop:leading-[18px] laptop:tracking-[2px] laptop:font-medium"
+                    >
+                      00
+                    </p>
+                    <p
+                      class=" left-[262px] text-white laptop:top-[328px] laptop:left-[392px] text-[9px] leading-[11px] tracking-[1.28px] laptop:font-grot laptop:text-[14px] laptop:leading-[18px] laptop:tracking-[2px] laptop:font-medium"
+                    >
+                      /
+                    </p>
+                    <p
+                      id="valueYearCard"
+                      class=" left-[268px] text-white laptop:top-[328px] laptop:left-[400px] text-[9px] leading-[11px] tracking-[1.28px] laptop:font-grot laptop:text-[14px] laptop:leading-[18px] laptop:tracking-[2px] laptop:font-medium"
+                    >
+                      00
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </header>
+   
       <section id="sectionForm" class="">
         <form
-          class="w-[327px] h-[328px] top-[331px] left-6 right-6 absolute laptop:w-[381px] laptop:h-[384px] laptop:left-[832px] laptop:top-[275px]"
+          class="w-[327px] h-[328px] top-[331px] left-6 right-6  laptop:w-[381px] laptop:h-[384px] laptop:left-[832px] laptop:top-[275px]"
         >
           <label
             class="mt-0 font-grot text-[12px] leading-[15px] tracking-[2px] font-medium not-italic block"
@@ -203,3 +178,4 @@
     </section>
   </body>
 </html>
+
