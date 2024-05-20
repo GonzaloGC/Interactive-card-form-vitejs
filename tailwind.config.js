@@ -19,7 +19,7 @@ export default {
       },
     },
     screens: {
-      'laptop': '1024px',
+      'laptop': '1230px',
       'desktop': '1440px',
     },
   },

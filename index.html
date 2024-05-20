@@ -11,16 +11,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Interactive card details form</title>
+    <!-- flex laptop:items-center laptop:justify-center laptop:content-center justify-center items-start -->
   </head>
-  <body class="flex laptop:items-center laptop:justify-center laptop:content-center justify-center items-start m-0 p-0 h-screen ">
-    <section class="flex flex-col laptop:flex-row laptop:gap-[350px] laptop:justify-start laptop:items-center justify-center items-center gap-[91px] laptop:w-[1440px]">
+  <body class="grid items-start justify-items-center h-screen m-0 p-0 laptop:w-screen laptop:h-full laptop:bg-[url('src/images/bg-main-desktop.png')] laptop:bg-[length:36%_100%] laptop:bg-no-repeat ">
+    <section class="flex flex-col laptop:flex-row  laptop:justify-center laptop:items-center justify-between items-center gap-[91px] laptop:gap-[180px] laptop:min-w-[1230px]">
       <header
-        class="w-[375px] h-[240px] bg-[url('src/images/bg-main-mobile.png')] bg-no-repeat bg-cover laptop:flex laptop:justify-center laptop:items-center laptop:bg-[url('src/images/bg-main-desktop.png')] laptop:bg-no-repeat laptop:h-screen laptop:w-[483px]"
+        class="w-[375px] h-[240px] bg-[url('src/images/bg-main-mobile.png')] bg-no-repeat bg-cover laptop:flex laptop:justify-center laptop:items-center laptop:h-screen laptop:w-[483px] laptop:bg-none"
        >
         <section
-          class="w-[343px] h-[251px] laptop:w-[541px] laptop:h-[527px] laptop:flex laptop:flex-col-reverse laptop:justify-center laptop:left-[160px] left-[16px] laptop:bottom-10 gap-[6px] relative"
+          class="w-[343px] h-[251px] laptop:w-[541px] laptop:h-[527px] laptop:flex laptop:flex-col-reverse laptop:justify-center  left-[16px] laptop:pr-[500px] laptop:bottom-10 gap-[6px] laptop:gap-0 relative"
           >
-          <div class="bg-[url('src/images/bg-card-back.png')] bg-no-repeat bg-cover w-[286px] h-[157px] laptop:left-[95px] laptop:w-[447px] laptop:h-[245px] pb-[2px] pr-9 laptop:pr-14 laptop:pb-1 absolute laptop:relative top-[32px] left-[50px] flex justify-end items-center">
+          <div class="bg-[url('src/images/bg-card-back.png')] bg-no-repeat bg-cover w-[286px] h-[157px] laptop:left-[95px] laptop:w-[447px] laptop:h-[245px] pb-[2px] pr-9 laptop:pr-14 laptop:pb-1 absolute laptop:relative top-[32px] left-[58px] flex justify-end items-center">
 
             <p
               id="numberCardBack"
@@ -78,8 +79,9 @@
           </div>
         </section>
       </header>
+      
    
-      <section id="sectionForm" class="laptop:pb-[20px] laptop:pr-[70px]">
+      <section id="sectionForm" class="laptop:pb-[20px] ">
         <form
           class="w-[327px] h-[328px] top-[331px] left-6 right-6 laptop:w-[381px] laptop:h-[384px] laptop:left-[832px] "
         >
