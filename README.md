@@ -67,7 +67,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./src/images/screenShot-interactive.png)
+![](/src/images/screenShot-form-card-bank.jpg)
 
 ### Links
 
